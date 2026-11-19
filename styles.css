@@ -21,8 +21,8 @@
     --text-secondary: #9ca3af;
     --accent-main: #2dd4bf;
     --accent-hover: #14b8a6;
-    --font-body: 'DM Sans', sans-serif;
-    --font-code: 'Fira Code', monospace;
+    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-code: 'JetBrains Mono', monospace;
 }
 
 * {
@@ -34,6 +34,11 @@
 body {
     font-family: var(--font-body);
     background-color: var(--bg-color);
+    background-image: radial-gradient(circle at 50% 50%, rgba(17, 17, 17, 0.82), rgba(10, 10, 10, 0.94)), url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: var(--text-primary);
     height: 100vh;
     display: flex;
@@ -167,8 +172,9 @@ body {
 }
 
 .starter-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
+    background-color: rgba(26, 26, 26, 0.75);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text-primary);
     padding: 1rem;
     border-radius: 8px;
@@ -176,6 +182,7 @@ body {
     font-family: var(--font-body);
     transition: all 0.2s;
     max-width: 200px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .starter-card:hover {
